@@ -1,1 +1,8 @@
 # Home_Sales
+For this project, I created a new repository on GitHub called "Home_Sales" and cloned it to my local machine. After setting up the environment, I renamed the provided "Home_Sales_starter_code.ipynb" file to "Home_Sales.ipynb." I began by importing the necessary PySpark SQL functions to handle the home sales data efficiently. Using PySpark, I read the "home_sales_revised.csv" file into a Spark DataFrame and created a temporary table called "home_sales" for easier querying.
+
+Next, I used SparkSQL to analyze the data and answer several questions. I calculated the average price for four-bedroom houses sold each year, rounding the results to two decimal places. Then, I computed the average price of homes built in each year with three bedrooms and three bathrooms, followed by homes with similar characteristics but with two floors and a minimum area of 2,000 square feet.
+
+I also analyzed the average home price per "view" rating for homes with an average price of at least $350,000. I measured the runtime of this query to establish a baseline. To optimize future queries, I cached the "home_sales" temporary table, verified that it was cached, and then reran the previous query to compare the runtime before and after caching.
+
+Afterward, I partitioned the home sales data by the "date_built" field and saved it in Parquet format. I created a new temporary table for the partitioned Parquet data and ran the query again to compare runtimes. Lastly, I uncached the "home_sales" temporary table and verified that it had been uncached. Finally, I pushed all my changes to the "Home_Sales" GitHub repository.
